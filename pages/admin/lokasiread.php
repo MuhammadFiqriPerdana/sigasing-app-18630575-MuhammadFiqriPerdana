@@ -28,10 +28,7 @@
          <i class="fa fa-plus-circle"></i> Tambah Data</a>
       </div>
       <div class="card-body">
-      </div>
-   </div>
-</div>
-<table id="mytable" class="table table-bordered table-hover">
+         <table id="mytable" class="table table-bordered table-hover">
    <thead>
       <tr>
          <th>No</th>
@@ -76,6 +73,9 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ?>
    </tbody>
 </table>
+      </div>
+   </div>
+</div>
 <?php include_once "partials/scripts.php" ?>
 <?php include_once "partials/scriptsdatatables.php" ?>
 <script>
