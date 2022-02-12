@@ -82,9 +82,9 @@
                         <tr>
                             <td><?php echo $no++ ?></td>
                             <td><?php echo $row['nama_jabatan'] ?></td>
-                            <td><?php echo $row['gapok_jabatan'] ?></td>
-                            <td><?php echo $row['tunjangan_jabatan'] ?></td>
-                            <td><?php echo $row['uang_makan_perhari'] ?></td>
+                            <td style="text-align:right"><?php echo number_format($row['gapok_jabatan']) ?></td>
+                            <td style="text-align:right"><?php echo number_format($row['tunjangan_jabatan']) ?></td>
+                            <td style="text-align:right"><?php echo number_format($row['uang_makan_perhari']) ?></td>
                             <td>
                                 <a href="?page=jabatanupdate&id=<?php echo $row['id'] ?>" class="btn btn-primary btn-sm mr-1">
                                     <i class="fa fa-edit"></i> Ubah
