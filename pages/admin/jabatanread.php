@@ -44,7 +44,7 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Data Jabatan</h3>
-            <a href="?page=lokasicreate" class="btn btn-success btn-sm float-right">
+            <a href="?page=jabatancreate" class="btn btn-success btn-sm float-right">
                 <i class="fa fa-plus-circle"></i> Tambah Data</a>
         </div>
         <div class="card-body">
