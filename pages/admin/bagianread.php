@@ -44,7 +44,7 @@
    <div class="card">
       <div class="card-header">
          <h3 class="card-title">Data bagian</h3>
-         <a href="?page=lokasicreate" class="btn btn-success btn-sm float-right">
+         <a href="?page=bagiancreate" class="btn btn-success btn-sm float-right">
             <i class="fa fa-plus-circle"></i> Tambah Data</a>
       </div>
       <div class="card-body">
@@ -71,7 +71,9 @@
                <?php
                $database = new Database();
                $db = $database->getConnection();
-               $selectSql = "SELECT B.*, K.nama_lengkap nama_kepala_bagian, L.nama_lokasi nama_lokasi_bagian FROM bagian B LEFT JOIN karyawan K ON B.karyawan_id = K.id LEFT JOIN lokasi L ON B.lokasi_id = L.id";
+               $selectSql = "SELECT B.*, K.nama_lengkap nama_kepala_bagian, L.nama_lokasi nama_lokasi_bagian FROM bagian B
+                LEFT JOIN karyawan K ON B.karyawan_id = K.id
+                LEFT JOIN lokasi L ON B.Lokasi_id = L.id";
                $stmt = $db->prepare($selectSql);
                $stmt->execute();
                $no = 1;
@@ -83,10 +85,10 @@
                      <td><?php echo $row['nama_kepala_bagian'] ?></td>
                      <td><?php echo $row['nama_lokasi_bagian'] ?></td>
                      <td>
-                        <a href="?page=lokasiupdate&id=<?php echo $row['id'] ?>" class="btn btn-primary btn-sm mr-1">
+                        <a href="?page=bagianupdate&id=<?php echo $row['id'] ?>" class="btn btn-primary btn-sm mr-1">
                            <i class="fa fa-edit"></i> Ubah
                         </a>
-                        <a href="?page=lokasidelete&id=<?php echo $row['id'] ?>" class="btn btn-danger btn-sm" onClick="javascript: return confirm('Konfirmasi data akan dihapus?');">
+                        <a href="?page=bagiandelete&id=<?php echo $row['id'] ?>" class="btn btn-danger btn-sm" onClick="javascript: return confirm('Konfirmasi data akan dihapus?');">
                            <i class="fa fa-trash"></i> Hapus
                         </a>
                      </td>
