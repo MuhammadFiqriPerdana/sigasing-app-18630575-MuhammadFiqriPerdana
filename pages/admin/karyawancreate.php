@@ -4,7 +4,7 @@ if (isset($_POST['button_create'])) {
 
     $database = new Database();
     $db = $database->getConnection();
-    $validateSql = "SELECT * FROM lokasi WHERE nama_lokasi = ?";
+    $validateSql = "SELECT * FROM karyawan WHERE nik = ?";
     $stmt = $db->prepare($validateSql);
     $stmt->bindParam(1, $_POST['nik']);
     $stmt->execute();
